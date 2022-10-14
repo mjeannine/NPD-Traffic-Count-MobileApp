@@ -9,7 +9,7 @@ This app will be used by NPD in Traffic Count Survey
 
 #About Technologies
 -try to use new features to have well designed app(use more than 4 resources)
--Flutter dev
+-Flutter dev will be used 
 -use environment which you're familiar with (could be better when we use VSCode)
 -use meaningfull names when you're creating file or folder
 -please use flutter folder structure to organize your files in good manner

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:npd_traffic_count_app/functioning_screens/report.dart';
+import 'package:npd_traffic_count_app/functioning_screens/traffic_counting.dart';
 
 class HomeScreen extends StatefulWidget {
   @override
@@ -17,7 +19,7 @@ class InitState extends State<HomeScreen> {
         child: Column(
           children: [
             Container(
-              height: 300,
+              height: 350,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(90),
@@ -44,10 +46,11 @@ class InitState extends State<HomeScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.start,
                       children: [
+
                         Container(
                           alignment: Alignment.topLeft,
                           width: 300,
-                          margin: EdgeInsets.only(left: 20),
+                          margin: EdgeInsets.only(left: 20, top: 30),
                           child: Text(
                             "Hi, Yvette IRADUKUNDA",
                             style: TextStyle(
@@ -60,10 +63,10 @@ class InitState extends State<HomeScreen> {
                         Container(
                           width: 50,
                           height: 50,
-                          margin: EdgeInsets.only(left: 100, top: 20),
+                          margin: EdgeInsets.only(left: 80, top: 50),
                           alignment: Alignment.topRight,
                           child: Image.asset(
-                            "../assets/icons/profileicon.jpg",
+                            "assets/icons/profileicon.jpg",
                             width: 35,
                             height: 35,
                           ),
@@ -71,7 +74,7 @@ class InitState extends State<HomeScreen> {
                       ],
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+                      margin: EdgeInsets.only(left: 20, right: 20, top: 30),
                       padding: EdgeInsets.only(left: 20, right: 20),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
@@ -104,7 +107,7 @@ class InitState extends State<HomeScreen> {
                         Container(
                           width: 100,
                           height: 100,
-                          margin: EdgeInsets.only(left: 40, top: 20),
+                          margin: EdgeInsets.only(left: 33, top: 20),
                           padding: EdgeInsets.only(top:20),
                           decoration: BoxDecoration(
                               // border: Border.all( color: Colors.orange,width: 0),
@@ -112,7 +115,7 @@ class InitState extends State<HomeScreen> {
                               color: Colors.white,
                               boxShadow: [
                                 BoxShadow(
-                                  offset: Offset(0, 5),
+                                  offset: Offset(0, 4),
                                   blurRadius: 5,
                                   color: Color.fromARGB(255, 209, 199, 199),
                                 )
@@ -122,6 +125,7 @@ class InitState extends State<HomeScreen> {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment:CrossAxisAlignment.center,
                                 children: [
+                                  
                                   Container(
                                     alignment: Alignment.center,
             
@@ -129,7 +133,7 @@ class InitState extends State<HomeScreen> {
                                     style: TextStyle(fontWeight: FontWeight.bold),
                                     ),
                                   ),
-
+                                  
                                    Container(
                                     alignment: Alignment.center,
                                     padding: EdgeInsets.only(top:20),
@@ -145,7 +149,7 @@ class InitState extends State<HomeScreen> {
                         Container(
                           width: 100,
                           height: 100,
-                          margin: EdgeInsets.only(left: 60, top: 20),
+                          margin: EdgeInsets.only(left: 50, top: 20),
                           padding: EdgeInsets.only(top:20),
                           decoration: BoxDecoration(
                               // border: Border.all( color: Colors.orange,width: 0),
@@ -229,15 +233,37 @@ class InitState extends State<HomeScreen> {
                 ),
               ),
             ),
-            Container(
+
+            GestureDetector(
+              onTap: () => {
+               
+ Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) =>  Report_Screen()),),
+
+              },
+           child:Container(
               alignment: Alignment.topRight,
-              child: Text("See all"),
+              child: Text("See all",
+              style: TextStyle(
+                shadows: [
+                Shadow(
+                    color: Colors.blue,
+                    offset: Offset(0, -3))
+              ],
+              color: Colors.transparent,
+                decoration: TextDecoration.underline,
+              decorationColor: Colors.blue,
+              decorationThickness: 2,),
+              ),
               margin: EdgeInsets.only(right: 20, top: 20),
               padding: EdgeInsets.only(right: 20),
             ),
-            for(int a=1;a<=3;a++)
+
+            ),
+            for(int a=1;a<=5;a++)
             Container(
-              height: 80,
+              height: 90,
               margin: EdgeInsets.only(left: 20, right: 20, top: 5),
               padding: EdgeInsets.only(left: 20, right: 20),
               decoration: BoxDecoration(
@@ -285,14 +311,14 @@ class InitState extends State<HomeScreen> {
                       Container(
                         margin: EdgeInsets.only(top: 20,left:20),
                         child: Image.asset(
-                  "../assets/icons/bike.jpg",
+                  "assets/icons/bike.jpg",
                   width: 60,
                   height: 60,
                 ),
                       ),
                     ],
                   ),
-
+              
                   
                 ],
                ),
@@ -304,7 +330,7 @@ class InitState extends State<HomeScreen> {
       bottomNavigationBar: BottomNavigationBar(
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home, color: Color.fromARGB(255, 255, 183, 77)),
+            icon: Icon( Icons.home, color: Color.fromARGB(255, 255, 183, 77),),
             label: 'Home',
           ),
           BottomNavigationBarItem(
@@ -315,8 +341,11 @@ class InitState extends State<HomeScreen> {
             label: 'New',
           ),
           BottomNavigationBarItem(
+            
             icon: Icon(Icons.account_circle_rounded,
-                color: Color.fromARGB(255, 255, 183, 77)),
+                color: Color.fromARGB(255, 255, 183, 77),
+                
+                ),
             label: 'profile',
           ),
         ],

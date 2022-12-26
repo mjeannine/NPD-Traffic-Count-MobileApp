@@ -18,7 +18,7 @@ class InitState extends State<LoginScreen> {
         child: Column(
           children: [
             Container(
-              height: 250,
+              height: 400,
               decoration: BoxDecoration(
                 borderRadius:
                 BorderRadius.only(bottomLeft: Radius.circular(90)),
@@ -49,15 +49,16 @@ class InitState extends State<LoginScreen> {
                     //   ),
                     ),
                      Container(
-                      
+                      margin: EdgeInsets.only(top:40),
                       child: Text(
                         "Phase 4", 
                         
                       
                         style:TextStyle(
+                          fontWeight: FontWeight.bold,
                           color:Colors.white,
                           fontStyle: FontStyle.italic,
-                           fontSize: 20),)
+                           fontSize: 30),)
                     //   Image.asset(
                     //     "../assets/logos/npd_logo.png",
                     //     width: 100,
@@ -80,7 +81,7 @@ class InitState extends State<LoginScreen> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(left: 20, right: 20, top: 20),
+              margin: EdgeInsets.only(left: 20, right: 20, top: 100),
               padding: EdgeInsets.only(left: 20, right: 20),
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
@@ -97,7 +98,7 @@ class InitState extends State<LoginScreen> {
                 cursorColor: Colors.orange.shade300,
                 decoration: InputDecoration(
                   icon: Image.asset(
-                    "../assets/icons/id.png",
+                    "assets/icons/id.png",
                     height: 40,
                     width: 40,
                   ),
@@ -138,11 +139,11 @@ class InitState extends State<LoginScreen> {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(top: 10, right: 20),
+              margin: EdgeInsets.only(top: 10, right: 30),
               alignment: Alignment.centerRight,
               child: GestureDetector(
                   child: Text("Forgot spot code",
-                      style: TextStyle(fontWeight: FontWeight.bold)),
+                      style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue)),
                   onTap: () => {
                         //code for changing spot code
                       }),
@@ -193,7 +194,7 @@ class InitState extends State<LoginScreen> {
               alignment: Alignment.center,
               child: GestureDetector(
                   child:  Image.asset(
-                        "../assets/logos/npd_logo.png",
+                        "assets/logos/npd_logo.png",
                         width: 80,
                         height: 80,
                       ),

@@ -47,8 +47,8 @@ class InitState extends State<SplashScreen> {
             ),
           ),
           Center(
-            child: AnimatedSplashScreen(splash: Image.asset("../assets/logos/Traffic5.png", width: 70,height: 70,),duration: 0,
-      splashTransition: SplashTransition.rotationTransition,animationDuration:Duration(seconds: 20) ,
+            child: AnimatedSplashScreen(splash: Image.asset("assets/logos/Traffic5.png", width: 70,height: 70,),duration: 0,
+      splashTransition: SplashTransition.rotationTransition,animationDuration:Duration(seconds: 10) ,
       backgroundColor: Colors.white,
       
       nextScreen: LoginScreen()), 
@@ -68,7 +68,7 @@ class InitState extends State<SplashScreen> {
               children: [
                 Container(
                   child: Image.asset(
-                  "../assets/logos/npd_logo.png",
+                  "assets/logos/npd_logo.png",
                   width: 100,
                   height: 100,
                 ),

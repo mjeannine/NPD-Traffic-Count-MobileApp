@@ -21,7 +21,7 @@ class InitState extends State<LoginScreen> {
               height: 400,
               decoration: BoxDecoration(
                 borderRadius:
-                BorderRadius.only(bottomLeft: Radius.circular(90)),
+                    BorderRadius.only(bottomLeft: Radius.circular(90)),
                 color: Colors.orange,
                 gradient: LinearGradient(
                   colors: [(Colors.orange), (Colors.orange.shade800)],
@@ -35,36 +35,25 @@ class InitState extends State<LoginScreen> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Container(
-                      margin: EdgeInsets.only(top:60),
+                      margin: EdgeInsets.only(top: 60),
                       child: Text(
                         "Traffic Count Survey",
-                       style:TextStyle(
-                        fontStyle: FontStyle.italic, 
-                        fontSize: 20,
-                        color:Colors.white),),
-                    //   Image.asset(
-                    //     "../assets/logos/npd_logo.png",
-                    //     width: 100,
-                    //     height: 100,
-                    //   ),
+                        style: TextStyle(
+                            fontStyle: FontStyle.italic,
+                            fontSize: 20,
+                            color: Colors.white),
+                      ),
                     ),
-                     Container(
-                      margin: EdgeInsets.only(top:40),
-                      child: Text(
-                        "Phase 4", 
-                        
-                      
-                        style:TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color:Colors.white,
-                          fontStyle: FontStyle.italic,
-                           fontSize: 30),)
-                    //   Image.asset(
-                    //     "../assets/logos/npd_logo.png",
-                    //     width: 100,
-                    //     height: 100,
-                    //   ),
-                    ),
+                    Container(
+                        margin: EdgeInsets.only(top: 40),
+                        child: Text(
+                          "Phase 4",
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
+                              fontStyle: FontStyle.italic,
+                              fontSize: 30),
+                        )),
                     Container(
                       margin: EdgeInsets.only(right: 30, top: 20),
                       alignment: Alignment.bottomRight,
@@ -90,7 +79,7 @@ class InitState extends State<LoginScreen> {
                     BoxShadow(
                       offset: Offset(0, 10),
                       blurRadius: 50,
-                      color: Colors.orange.shade300,
+                      color: Color.fromRGBO(255, 183, 77, 1),
                     )
                   ]),
               alignment: Alignment.center,
@@ -143,18 +132,18 @@ class InitState extends State<LoginScreen> {
               alignment: Alignment.centerRight,
               child: GestureDetector(
                   child: Text("Forgot spot code",
-                      style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue)),
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold, color: Colors.blue)),
                   onTap: () => {
                         //code for changing spot code
                       }),
             ),
             GestureDetector(
               onTap: () => {
-               
- Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) =>  HomeScreen()),),
-
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => HomeScreen()),
+                ),
               },
               child: Container(
                 margin: EdgeInsets.only(top: 50, right: 20, left: 20),
@@ -169,35 +158,30 @@ class InitState extends State<LoginScreen> {
                     ),
                   ],
                   gradient: LinearGradient(
-                    colors: [(Colors.orange), (Colors.orange.shade800)],
+                    colors: [(Colors.orange), (Color.fromRGBO(239, 108, 0, 1))],
                     begin: Alignment.centerLeft,
                     end: Alignment.center,
                   ),
                   borderRadius: BorderRadius.circular(50),
                 ),
-           
-                  child: Text(
-                    "CONTINUE",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold,
-                    ),
+                child: Text(
+                  "CONTINUE",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
                   ),
-                  
-          
-                
                 ),
               ),
-            
+            ),
             Container(
               margin: EdgeInsets.only(top: 40, right: 20),
               alignment: Alignment.center,
               child: GestureDetector(
-                  child:  Image.asset(
-                        "assets/logos/npd_logo.png",
-                        width: 80,
-                        height: 80,
-                      ),
+                  child: Image.asset(
+                    "assets/logos/npd_logo.png",
+                    width: 80,
+                    height: 80,
+                  ),
                   onTap: () => {
                         //code for changing spot code
                       }),

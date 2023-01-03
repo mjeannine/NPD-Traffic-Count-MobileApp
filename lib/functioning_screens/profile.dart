@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-
+import 'package:npd_traffic_count_app/functioning_screens/home.dart';
+import 'package:npd_traffic_count_app/functioning_screens/traffic_counting.dart';
 class Profile_Screen extends StatefulWidget {
   @override
   State<Profile_Screen> createState() => InitState();
@@ -48,10 +49,10 @@ class InitState extends State<Profile_Screen> {
                     Container(
                       width: 70,
                       height: 70,
-                      margin: const EdgeInsets.only(top: 40),
+                      margin: const EdgeInsets.only(top: 100),
                       alignment: Alignment.center,
                       child: Image.asset(
-                        "../assets/icons/profileicon.jpg",
+                        "assets/icons/profileicon.jpg",
                         width: 50,
                         height: 50,
                       ),
@@ -73,7 +74,7 @@ class InitState extends State<Profile_Screen> {
                     ),
                   ],
                 )),
-                height: 200,
+                height: 350,
                 margin: EdgeInsets.only(
                   left: 5,
                   right: 5,
@@ -440,26 +441,46 @@ class InitState extends State<Profile_Screen> {
           ),
         ),
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+   bottomNavigationBar: BottomNavigationBar(
+     
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home, color: Color.fromARGB(255, 255, 183, 77)),
+            icon: GestureDetector(
+              onTap: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => HomeScreen())),
+              child: Icon(
+                Icons.home,
+                color: Color.fromARGB(255, 255, 183, 77),
+              ),
+            ),
             label: 'Home',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.add_circle_outlined,
-              color: Color.fromARGB(255, 255, 183, 77),
+         BottomNavigationBarItem(
+            icon: GestureDetector(
+              onTap: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Traffic_Count())),
+              child: Icon(
+                Icons.add_circle_outlined,
+                color: Color.fromARGB(255, 255, 183, 77),
+              ),
             ),
-            label: 'New',
+            label: 'Count',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle_rounded,
-                color: Color.fromARGB(255, 255, 183, 77)),
-            label: 'profile',
+            icon: GestureDetector(
+              onTap: () => Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Profile_Screen())),
+              child: Icon(
+                Icons.account_circle_rounded,
+                color: Color.fromARGB(255, 255, 183, 77),
+              ),
+            ),
+            label: 'Profile',
           ),
         ],
       ),
+
+   
     );
   }
 }

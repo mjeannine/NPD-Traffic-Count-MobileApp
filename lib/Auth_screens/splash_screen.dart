@@ -6,6 +6,8 @@ import 'package:flutter/material.dart';
 import 'package:npd_traffic_count_app/Auth_screens/login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({Key? key}) : super(key: key);
+
   @override
   State<StatefulWidget> createState() => InitState();
 }

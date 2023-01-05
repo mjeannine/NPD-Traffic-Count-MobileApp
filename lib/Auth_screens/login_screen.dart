@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:npd_traffic_count_app/functioning_screens/home.dart';
 
 class LoginScreen extends StatefulWidget {
+  const LoginScreen({Key? key}) : super(key: key);
+
   @override
   State<LoginScreen> createState() => InitState();
 }
@@ -72,6 +74,7 @@ class InitState extends State<LoginScreen> {
             Container(
               margin: EdgeInsets.only(left: 20, right: 20, top: 100),
               padding: EdgeInsets.only(left: 20, right: 20),
+               height: 60,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
                   color: Colors.grey[200],
@@ -101,6 +104,7 @@ class InitState extends State<LoginScreen> {
             Container(
               margin: EdgeInsets.only(left: 20, right: 20, top: 20),
               padding: EdgeInsets.only(left: 20, right: 20),
+               height: 60,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
                   color: Colors.grey[200],
@@ -140,15 +144,13 @@ class InitState extends State<LoginScreen> {
             ),
             GestureDetector(
               onTap: () => {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => HomeScreen()),
-                ),
+                Navigator.pushNamed(
+                  context, '/home'),
               },
               child: Container(
                 margin: EdgeInsets.only(top: 50, right: 20, left: 20),
                 alignment: Alignment.center,
-                height: 50,
+                height: 60,
                 decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(

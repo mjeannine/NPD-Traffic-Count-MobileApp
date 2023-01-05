@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:npd_traffic_count_app/functioning_screens/home.dart';
 import 'package:npd_traffic_count_app/functioning_screens/traffic_counting.dart';
+
 class Profile_Screen extends StatefulWidget {
+  const Profile_Screen({Key? key}) : super(key: key);
+
   @override
   State<Profile_Screen> createState() => InitState();
 }
@@ -441,13 +444,12 @@ class InitState extends State<Profile_Screen> {
           ),
         ),
       ),
-   bottomNavigationBar: BottomNavigationBar(
+     bottomNavigationBar: BottomNavigationBar(
      
         items: [
           BottomNavigationBarItem(
             icon: GestureDetector(
-              onTap: () => Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => HomeScreen())),
+              onTap: () => Navigator.pushNamed(context, '/home'),
               child: Icon(
                 Icons.home,
                 color: Color.fromARGB(255, 255, 183, 77),
@@ -457,8 +459,7 @@ class InitState extends State<Profile_Screen> {
           ),
          BottomNavigationBarItem(
             icon: GestureDetector(
-              onTap: () => Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Traffic_Count())),
+              onTap: () => Navigator.pushNamed(context, '/counting'),
               child: Icon(
                 Icons.add_circle_outlined,
                 color: Color.fromARGB(255, 255, 183, 77),
@@ -468,8 +469,7 @@ class InitState extends State<Profile_Screen> {
           ),
           BottomNavigationBarItem(
             icon: GestureDetector(
-              onTap: () => Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Profile_Screen())),
+              onTap: () => Navigator.pushNamed(context, '/profile'),
               child: Icon(
                 Icons.account_circle_rounded,
                 color: Color.fromARGB(255, 255, 183, 77),

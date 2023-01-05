@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class Report_Screen extends StatefulWidget {
+  const Report_Screen({Key? key}) : super(key: key);
+
   @override
   State<Report_Screen> createState() => InitState();
 }
@@ -55,26 +57,42 @@ class InitState extends State<Report_Screen> {
           ),
           ),
         
-      bottomNavigationBar: BottomNavigationBar(
-        items: const <BottomNavigationBarItem>[
+       bottomNavigationBar: BottomNavigationBar(
+     
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home, color: Color.fromARGB(255, 255, 183, 77)),
+            icon: GestureDetector(
+              onTap: () => Navigator.pushNamed(context, '/home'),
+              child: Icon(
+                Icons.home,
+                color: Color.fromARGB(255, 255, 183, 77),
+              ),
+            ),
             label: 'Home',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(
-              Icons.add_circle_outlined,
-              color: Color.fromARGB(255, 255, 183, 77),
+         BottomNavigationBarItem(
+            icon: GestureDetector(
+              onTap: () => Navigator.pushNamed(context, '/counting'),
+              child: Icon(
+                Icons.add_circle_outlined,
+                color: Color.fromARGB(255, 255, 183, 77),
+              ),
             ),
-            label: 'New',
+            label: 'Count',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle_rounded,
-                color: Color.fromARGB(255, 255, 183, 77)),
-            label: 'profile',
+            icon: GestureDetector(
+              onTap: () => Navigator.pushNamed(context, '/profile'),
+              child: Icon(
+                Icons.account_circle_rounded,
+                color: Color.fromARGB(255, 255, 183, 77),
+              ),
+            ),
+            label: 'Profile',
           ),
         ],
       ),
+
     );
   }
 }

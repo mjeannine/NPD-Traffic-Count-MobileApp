@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.npd_traffic_count_app">
    <application
-        android:label="npd_traffic_count_app"
+        android:label="NPD Traffic Count"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

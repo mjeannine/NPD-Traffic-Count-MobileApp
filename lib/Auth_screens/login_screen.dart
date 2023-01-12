@@ -20,7 +20,7 @@ class InitState extends State<LoginScreen> {
         child: Column(
           children: [
             Container(
-              height: 400,
+              height: 350,
               decoration: BoxDecoration(
                 borderRadius:
                     BorderRadius.only(bottomLeft: Radius.circular(90)),
@@ -174,6 +174,19 @@ class InitState extends State<LoginScreen> {
                   ),
                 ),
               ),
+            ),
+            SizedBox(height: 5,),
+             Container(
+              margin: EdgeInsets.only(top: 40, right: 20),
+              alignment: Alignment.center,
+              child: GestureDetector(
+                  child:   Text(
+                      "Don't have an account? Sign up",
+                     style: TextStyle(color: Colors.blue,fontSize:15,),
+                    ),
+                   onTap: () {
+                        Navigator.pushNamed(context, '/register');
+                      },),
             ),
             Container(
               margin: EdgeInsets.only(top: 40, right: 20),
